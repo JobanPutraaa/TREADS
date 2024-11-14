@@ -15,3 +15,4 @@ MonoBehaviour:
   animatorOV: {fileID: 22100000, guid: 2015f57ab99c4d44f9c9c3512cad5fdd, type: 2}
   damage: 5
   dashDistance: 0.75
+  previousAttackDuration: 0.23

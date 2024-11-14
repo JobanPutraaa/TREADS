@@ -8,8 +8,10 @@ public class PlayerCombat : MonoBehaviour
     public float lastClickedTime;
     public float lastComboEnd;
     int comboCounter;
+
+    private bool canAttack = true;
+    private float attackCooldown = 0.85f;
     private bool isDashing = false;
-    private bool isAttacking = false;
 
     [SerializeField] Weapon weapon;
     Animator animator;
@@ -26,18 +28,16 @@ public class PlayerCombat : MonoBehaviour
         {
             Attack();
         }
-        ExitAttack();
     }
 
     void Attack()
     {
-        if (Time.time - lastComboEnd > 0.5f && comboCounter <= combo.Count)
-        {
-            CancelInvoke("EndCombo");
+        if (!canAttack) return;
 
-            if (Time.time - lastClickedTime >= 0.25f)
+        if (Time.time - lastComboEnd > combo[comboCounter].previousAttackDuration + 0.5f && comboCounter <= combo.Count)
+        {
+            if (Time.time - lastClickedTime >= combo[comboCounter].previousAttackDuration)
             {
-                isAttacking = true;
                 animator.runtimeAnimatorController = combo[comboCounter].animatorOV;
                 animator.Play("Attack", 0, 0);
                 weapon.damage = combo[comboCounter].damage;
@@ -47,13 +47,13 @@ public class PlayerCombat : MonoBehaviour
                     StartCoroutine(DashForward(combo[comboCounter].dashDistance));
                 }
 
-                isAttacking = false;
                 comboCounter++;
                 lastClickedTime = Time.time;
 
                 if (comboCounter >= combo.Count)
                 {
                     comboCounter = 0;
+                    StartCoroutine(StartAttackCooldown());
                 }
             }
         }
@@ -61,9 +61,9 @@ public class PlayerCombat : MonoBehaviour
 
     void ExitAttack()
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.9f && animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-        {
-            Invoke("EndCombo", 0.4f);
+        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.8f && animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        {//CancelInvoke("EndCombo");
+            //Invoke("EndCombo", 0.1f);
         }
     }
 
@@ -71,6 +71,15 @@ public class PlayerCombat : MonoBehaviour
     {
         comboCounter = 0;
         lastComboEnd = Time.time;
+    }
+
+    private IEnumerator StartAttackCooldown()
+    {
+        canAttack = false;
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
+
+        lastClickedTime = 0;
     }
 
     private IEnumerator DashForward(float dashDistance)

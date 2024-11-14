@@ -13,6 +13,10 @@ public class PlayerLocomotion : MonoBehaviour
     public float movementSpeed = 7f;
     public float rotation = 15f;
 
+    private bool canMove;
+
+    Animator animator;
+
     private void Awake()
     {
         inputManager = GetComponent<InputManager>();

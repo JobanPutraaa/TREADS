@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatorOV: {fileID: 22100000, guid: 00ff38af03067644ca1a9b8a9e2c20c6, type: 2}
   damage: 5
-  dashDistance: 0.75
+  dashDistance: 0.6
+  previousAttackDuration: 0.26
