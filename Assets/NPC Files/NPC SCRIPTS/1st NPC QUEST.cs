@@ -8,6 +8,7 @@ public class QuestManager : MonoBehaviour
     public GameObject interactPromptUI; // Interaction prompt UI
     public Transform[] items;           // The items to collect in order
     public GameObject questGiver;       // The NPC giving the quest
+    public GameObject exclamationMark;  // Exclamation mark above the NPC
     public float interactionRange = 2f; // Range for interaction
     private Transform player;           // Player reference
     private int currentItemIndex = 0;   // Index of the item to collect
@@ -27,6 +28,9 @@ public class QuestManager : MonoBehaviour
 
         if (interactPromptUI != null)
             interactPromptUI.SetActive(false);
+
+        if (exclamationMark != null)
+            exclamationMark.SetActive(true); // Ensure the exclamation mark is visible at the start
 
         // Initialize the introductory dialogues
         introDialogues.Add("Hello! I have a quest for you. Are you ready to start?");
@@ -118,6 +122,13 @@ public class QuestManager : MonoBehaviour
         questActive = false;
         questCompleted = true;
         ShowDialogue("Thank you for completing the quest!");
+
+        // Make the exclamation mark disappear
+        if (exclamationMark != null)
+        {
+            exclamationMark.SetActive(false);
+        }
+
         // Add reward logic here
     }
 
@@ -136,7 +147,7 @@ public class QuestManager : MonoBehaviour
             }
 
             // Start a new coroutine to hide the dialogue after a delay
-            hideDialogueCoroutine = StartCoroutine(HideDialogueAfterDelay(3f)); // Adjust 3f for desired time
+            hideDialogueCoroutine = StartCoroutine(HideDialogueAfterDelay(5f)); // Adjust 3f for desired time
         }
     }
 
