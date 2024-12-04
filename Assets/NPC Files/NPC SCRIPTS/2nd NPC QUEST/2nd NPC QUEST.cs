@@ -33,7 +33,7 @@ public class DestroyItemsQuest : MonoBehaviour
             interactPromptUI.SetActive(false);
 
         if (exclamationMark != null)
-            exclamationMark.SetActive(false);
+            exclamationMark.SetActive(true);
 
         // Initialize the introductory dialogues
         introDialogues.Add("Hello! I have another quest for you. Are you ready?");
