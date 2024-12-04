@@ -5,29 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Navigate_UI : MonoBehaviour
 {
-    void Update()
+    public void Update()
     {
-
-    }
-
-    void Click_Space()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadSceneAsync("MainMenu");
         }
     }
-    void Click_Play()
+    public void Click_Play()
     {
         SceneManager.LoadSceneAsync("");
     }
-
-    void Click_Settings()
+    //
+    public void Click_Settings()
     {
         SceneManager.LoadSceneAsync("Settings");
     }
 
-    void click_Quit()
+    public void click_Quit()
     {
         Application.Quit();
     }
