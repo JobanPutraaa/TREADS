@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 5965272}
   - component: {fileID: 5965271}
   - component: {fileID: 5965270}
+  - component: {fileID: 5965273}
   m_Layer: 5
   m_Name: AudioCanvas
   m_TagString: Untagged
@@ -232,6 +233,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &5965273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5965268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c24c7188dac344fa1cf7189ade72ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &67713710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,13 +1980,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1882317082}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1882317089}
+        m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
+        m_MethodName: Click_Audio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2156,6 +2169,7 @@ GameObject:
   - component: {fileID: 740018642}
   - component: {fileID: 740018641}
   - component: {fileID: 740018640}
+  - component: {fileID: 740018643}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2255,6 +2269,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &740018643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740018638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c24c7188dac344fa1cf7189ade72ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &754220998
 GameObject:
   m_ObjectHideFlags: 0
@@ -6811,13 +6837,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1882317082}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1882317089}
+        m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
+        m_MethodName: Click_Display
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7397,13 +7423,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1882317082}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1882317089}
+        m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
+        m_MethodName: Click_Credits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7461,6 +7487,8 @@ GameObject:
   - component: {fileID: 1882317083}
   - component: {fileID: 1882317086}
   - component: {fileID: 1882317087}
+  - component: {fileID: 1882317089}
+  - component: {fileID: 1882317088}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7599,6 +7627,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c24c7188dac344fa1cf7189ade72ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1882317088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882317082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c24c7188dac344fa1cf7189ade72ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1882317089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882317082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e37905a84c0c64fbe6b1f56d3a41eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioCanvas: {fileID: 5965268}
+  DisplayCanvas: {fileID: 570967823}
+  CreditsCanvas: {fileID: 1281548863}
 --- !u!1 &1946523651
 GameObject:
   m_ObjectHideFlags: 0
