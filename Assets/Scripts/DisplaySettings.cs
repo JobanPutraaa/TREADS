@@ -44,6 +44,7 @@ public class DisplaySettings : MonoBehaviour
     {
         isFullScreen = fullToggle.isOn;
         Screen.SetResolution(SelectedResList[SelectedRes].width, SelectedResList[SelectedRes].height, isFullScreen);
+
     }
     void Update()
     {
