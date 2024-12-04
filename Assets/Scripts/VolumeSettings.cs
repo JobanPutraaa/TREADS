@@ -20,6 +20,8 @@ public class VolumeSettings : MonoBehaviour
         else
         {
             setMusicVol();
+            setSFXVolume();
+            setMasterVolume();
         }
     }
     public void setMusicVol()
@@ -44,5 +46,7 @@ public class VolumeSettings : MonoBehaviour
     {
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
         setMusicVol();
+        setSFXVolume();
+        setMasterVolume();
     }
 }
