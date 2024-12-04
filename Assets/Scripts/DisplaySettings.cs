@@ -30,5 +30,6 @@ public class DisplaySettings : MonoBehaviour
     void Update()
     {
         
+
     }
 }
