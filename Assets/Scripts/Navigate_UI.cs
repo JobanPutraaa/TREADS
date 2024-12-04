@@ -16,7 +16,6 @@ public class Navigate_UI : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("");
     }
-    //
     public void Click_Settings()
     {
         SceneManager.LoadSceneAsync("Settings");
