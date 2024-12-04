@@ -2024,8 +2024,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ec8583b40a1614d94afd5aa099f17e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolutionDropdown: {fileID: 0}
-  fullToggle: {fileID: 0}
+  resolutionDropdown: {fileID: 803439191}
+  fullToggle: {fileID: 621071197}
+  isFullScreen: 0
+  SelectedRes: 0
 --- !u!1 &754220998
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,6 +2229,7 @@ GameObject:
   - component: {fileID: 803439193}
   - component: {fileID: 803439192}
   - component: {fileID: 803439191}
+  - component: {fileID: 803439194}
   m_Layer: 5
   m_Name: DRPRes
   m_TagString: Untagged
@@ -2349,6 +2352,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803439189}
   m_CullTransparentMesh: 1
+--- !u!114 &803439194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803439189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ec8583b40a1614d94afd5aa099f17e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resolutionDropdown: {fileID: 0}
+  fullToggle: {fileID: 0}
+  isFullScreen: 0
+  SelectedRes: 0
 --- !u!1 &824661757
 GameObject:
   m_ObjectHideFlags: 0

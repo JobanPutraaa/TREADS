@@ -10,10 +10,10 @@ public class DisplaySettings : MonoBehaviour
     public Toggle fullToggle;
 
     Resolution[] Allresolutions;
-    bool isFullScreen;
-    int SelectedRes;
+    public bool isFullScreen;
+    public int SelectedRes;
 
-    private void Start()
+    public void Start()
     {
         isFullScreen = true;
         Allresolutions = Screen.resolutions;
