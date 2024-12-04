@@ -2324,7 +2324,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 740018645}
         m_TargetAssemblyTypeName: DisplaySettings, Assembly-CSharp
-        m_MethodName: ChangeFullScreen
+        m_MethodName: changeRes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
