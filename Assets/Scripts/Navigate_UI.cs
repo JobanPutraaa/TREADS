@@ -12,6 +12,11 @@ public class Navigate_UI : MonoBehaviour
             SceneManager.LoadSceneAsync("MainMenu");
         }
     }
+
+    public void Click_Back()
+    {
+        SceneManager.LoadSceneAsync("MainMenu");
+    }
     public void Click_Play()
     {
         SceneManager.LoadSceneAsync("");
