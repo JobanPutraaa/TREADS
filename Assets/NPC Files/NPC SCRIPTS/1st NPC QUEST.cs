@@ -4,20 +4,26 @@ using System.Collections.Generic;
 
 public class QuestManager : MonoBehaviour
 {
-    public GameObject dialogueUI;       // Dialogue UI
-    public GameObject interactPromptUI; // Interaction prompt UI
-    public Transform[] items;           // The items to collect in order
-    public GameObject questGiver;       // The NPC giving the quest
-    public GameObject exclamationMark;  // Exclamation mark above the NPC
-    public float interactionRange = 2f; // Range for interaction
-    private Transform player;           // Player reference
-    private int currentItemIndex = 0;   // Index of the item to collect
-    private bool questActive = false;   // Is the quest active?
-    private bool questCompleted = false; // Is the quest completed?
-    private Coroutine hideDialogueCoroutine; // Reference to the active coroutine
+    public GameObject dialogueUI;
+    public GameObject interactPromptUI;
+    public Transform[] items;
+    public GameObject questGiver;
+    public GameObject exclamationMark;
+    public GameObject exclamationMark2;
+    public float interactionRange = 2f;
+    private Transform player;
+    private int currentItemIndex = 0;
+    private bool questActive = false;
+    private bool questCompleted = false;
+    private Coroutine hideDialogueCoroutine;
 
-    private List<string> introDialogues = new List<string>(); // List to hold the introductory dialogues
-    private int currentIntroDialogueIndex = 0; // Index to track which intro dialogue is currently being displayed
+    public DestroyItemsQuest destroyItemsQuest; // Reference to the second quest script
+
+    private List<string> introDialogues = new List<string>();
+    private int currentIntroDialogueIndex = 0;
+
+    private List<string> completeQuestDialogues = new List<string>();
+    private int currentCompleteDialogueIndex = 0;
 
     void Start()
     {
@@ -30,15 +36,21 @@ public class QuestManager : MonoBehaviour
             interactPromptUI.SetActive(false);
 
         if (exclamationMark != null)
-            exclamationMark.SetActive(true); // Ensure the exclamation mark is visible at the start
+            exclamationMark.SetActive(true);
 
-        // Initialize the introductory dialogues
         introDialogues.Add("Hello! I have a quest for you. Are you ready to start?");
         introDialogues.Add("I need you to collect 3 brown grass in a specific order.");
         introDialogues.Add("You will be unable to get an item if it is not in order.");
         introDialogues.Add("The first brown grass would be near my house.");
         introDialogues.Add("The second brown grass is near the house to my right.");
         introDialogues.Add("And the last brown grass should be near the house to my left.");
+
+        completeQuestDialogues.Add("Thank you for completing the quest!");
+        completeQuestDialogues.Add("Mary is actually looking for you too.");
+        completeQuestDialogues.Add("She's at the house to my right.");
+
+        if (destroyItemsQuest != null)
+            destroyItemsQuest.enabled = false; // Ensure the second quest is initially disabled
     }
 
     void Update()
@@ -109,7 +121,7 @@ public class QuestManager : MonoBehaviour
         // Check if all items are collected
         if (currentItemIndex == items.Length)
         {
-            ShowDialogue("You have collected all items! Return to the NPC.");
+            ShowDialogue("You have collected all items! Return to Eugene.");
         }
         else
         {
@@ -119,17 +131,28 @@ public class QuestManager : MonoBehaviour
 
     void CompleteQuest()
     {
-        questActive = false;
-        questCompleted = true;
-        ShowDialogue("Thank you for completing the quest!");
-
-        // Make the exclamation mark disappear
-        if (exclamationMark != null)
+        if (currentCompleteDialogueIndex < completeQuestDialogues.Count)
         {
-            exclamationMark.SetActive(false);
+            ShowDialogue(completeQuestDialogues[currentCompleteDialogueIndex]);
+            currentCompleteDialogueIndex++;
         }
+        else
+        {
+            questActive = false;
+            questCompleted = true;
 
-        // Add reward logic here
+            if (exclamationMark != null)
+            {
+                exclamationMark.SetActive(false);
+                exclamationMark2.SetActive(true);
+            }
+
+            // Activate the second quest
+            if (destroyItemsQuest != null)
+            {
+                destroyItemsQuest.enabled = true;
+            }
+        }
     }
 
     void ShowDialogue(string message)
@@ -147,7 +170,7 @@ public class QuestManager : MonoBehaviour
             }
 
             // Start a new coroutine to hide the dialogue after a delay
-            hideDialogueCoroutine = StartCoroutine(HideDialogueAfterDelay(5f)); // Adjust 3f for desired time
+            hideDialogueCoroutine = StartCoroutine(HideDialogueAfterDelay(5f));
         }
     }
 
