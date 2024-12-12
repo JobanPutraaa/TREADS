@@ -19,11 +19,11 @@ public class Navigate_UI : MonoBehaviour
     }
     public void Click_Play()
     {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(4);
     }
     public void Click_Settings()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(2);
     }
 
     public void click_Quit()
