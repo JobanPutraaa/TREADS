@@ -1245,10 +1245,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1170671622}
   - component: {fileID: 1170671623}
-  - component: {fileID: 1170671630}
   - component: {fileID: 1170671627}
   - component: {fileID: 1170671628}
   - component: {fileID: 1170671629}
+  - component: {fileID: 1170671630}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1291,19 +1291,7 @@ MonoBehaviour:
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1170671630}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: CancelInvoke
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_DeviceRegainedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1313,7 +1301,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1170671630}
         m_TargetAssemblyTypeName: ShipControls, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
