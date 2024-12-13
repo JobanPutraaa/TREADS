@@ -88,8 +88,8 @@
     <Compile Include="Assets\LevelPickerAssets\Assets\TutorialInfo\UnityTechnologies\ParticlePack\Shared\Scripts\AdjustTimeScale.cs" />
     <Compile Include="Assets\Scripts\Navigate_UI.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\TutorialInfo\UnityTechnologies\ParticlePack\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
-    <Compile Include="Assets\Scripts\AttackSO.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\Core\FlagEnumAttribute.cs" />
+    <Compile Include="Assets\Scripts\AttackSO.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeHelper.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeTransforms.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\TutorialInfo\UnityTechnologies\ParticlePack\Shared\Scripts\SimpleCameraController.cs" />
