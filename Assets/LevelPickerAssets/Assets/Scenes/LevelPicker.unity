@@ -1246,7 +1246,6 @@ GameObject:
   - component: {fileID: 1170671622}
   - component: {fileID: 1170671623}
   - component: {fileID: 1170671624}
-  - component: {fileID: 1170671625}
   - component: {fileID: 1170671627}
   - component: {fileID: 1170671628}
   - component: {fileID: 1170671629}
@@ -1303,7 +1302,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1170671624}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_TargetAssemblyTypeName: ShipControls, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
@@ -1318,22 +1317,20 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1170671625}
-        m_TargetAssemblyTypeName: ShipInteract, Assembly-CSharp
+      - m_Target: {fileID: 1170671621}
+        m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 5b7c4a3b-d8c4-44fa-ac31-4860aa03f53b
-    m_ActionName: Player/Interact[/Keyboard/e,/PlayaBit. Virtual Gamepad Device/trigger,/PlayaBit.
-      Virtual Gamepad Device1/trigger,/PlayaBit. Virtual Gamepad Device2/trigger,/PlayaBit.
-      Virtual Gamepad Device3/trigger]
+    m_ActionName: Player/Interact[/Keyboard/e,/Shaul Eizikovich vJoy - Virtual Joystick/trigger]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1351,19 +1348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44723f1ffa8afa4db6ddfcf2f410b27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5.8
---- !u!114 &1170671625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170671621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a8c434aabdfb8e40967f612bef55272, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  speed: 6.17
 --- !u!54 &1170671627
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1581,7 +1566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1170671621}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1314848781
@@ -1700,6 +1685,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1d30e0519aa33374a84220334297160e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1747,7 +1737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1835968784}
-  - component: {fileID: 1835968783}
+  - component: {fileID: 1835968785}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -1755,21 +1745,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1835968783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835968782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c1a02b0dd49c2f46b6d78cfc9bc91ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1170671622}
-  smoothTime: 0.3
-  offset: {x: 0, y: 22, z: -17.5}
 --- !u!4 &1835968784
 Transform:
   m_ObjectHideFlags: 0
@@ -1786,6 +1761,21 @@ Transform:
   - {fileID: 840393203}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1835968785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835968782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1a02b0dd49c2f46b6d78cfc9bc91ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1170671622}
+  smoothTime: 0.3
+  offset: {x: -2, y: 25, z: -5}
 --- !u!1 &1977768885 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a18f2eeda2826447ba2d59282912fee,

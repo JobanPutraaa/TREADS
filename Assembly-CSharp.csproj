@@ -88,11 +88,10 @@
     <Compile Include="Assets\LevelPickerAssets\Assets\TutorialInfo\UnityTechnologies\ParticlePack\Shared\Scripts\AdjustTimeScale.cs" />
     <Compile Include="Assets\Scripts\Navigate_UI.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\TutorialInfo\UnityTechnologies\ParticlePack\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
-    <Compile Include="Assets\Scripts\AttackSO.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\Core\FlagEnumAttribute.cs" />
+    <Compile Include="Assets\Scripts\AttackSO.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeHelper.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeTransforms.cs" />
-    <Compile Include="Assets\LevelPickerAssets\Assets\CameraFollow.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\TutorialInfo\UnityTechnologies\ParticlePack\Shared\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WateverVolumeFloater.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -101,7 +100,6 @@
     <Compile Include="Assets\NPC Files\NPC SCRIPTS\2nd NPC QUEST\2nd NPC QUEST.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
-    <Compile Include="Assets\LevelPickerAssets\Assets\ShipControls.cs" />
     <Compile Include="Assets\Scripts\AnimatorManager.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\TutorialInfo\UnityTechnologies\ParticlePack\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
@@ -115,6 +113,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\PlayerLocomotion.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\TutorialInfo\UnityTechnologies\ParticlePack\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
@@ -125,6 +124,7 @@
     <Compile Include="Assets\Input Settings\PlayerControls.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\DisplaySettings.cs" />
+    <Compile Include="Assets\Scripts\ShipControls.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\Bitgem\StylisedWater\URP\Scripts\Bitgem\VFX\StylisedWater\WaterVolumeBox.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\TutorialInfo\UnityTechnologies\ParticlePack\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\LevelPickerAssets\Assets\TutorialInfo\Scripts\Readme.cs" />
